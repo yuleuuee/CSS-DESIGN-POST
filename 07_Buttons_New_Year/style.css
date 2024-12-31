@@ -1,0 +1,145 @@
+body {
+    height: 100vh;
+    margin: 0;
+    /* background-color: #373737; */
+    background-color: #000;
+    /* background: linear-gradient(270deg, #e96196 10%, #ffffff 74%); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div {
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+button {
+    width: 90%;
+    font-weight: bold;
+    font-size: 1.5em;
+    padding: 20px 70px;
+    margin: 40px;
+    cursor: pointer;
+    transition: 0.5s;
+    background: black;
+    /* background: linear-gradient(90deg, #e96196 10%, #ffffff 74%); */
+    position: relative;
+    z-index: 0;
+
+    transition: transform 0.2s;
+}
+
+button:active {
+    transform: scale(1.1); /* Increase the size by 10% on click */
+  }
+
+button:first-child{
+    border: 2px solid #eb0feb;
+    color: #eb0feb;
+    box-shadow: 0 0 20px 0 #eb0feb;
+}
+
+button:nth-child(2){
+    border: 2px solid #42eb0f;
+    color: #42eb0f;
+    box-shadow: 0 0 20px 0 #42eb0f;
+}
+
+button:last-child{
+    border: 2px solid #00ffff;
+    color: #00ffff;
+    box-shadow: 0 0 20px 0 #00ffff;
+}
+
+/* Button Before */
+
+button::before{
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: 10px;
+    height: 10px;
+    transition: 0.5s ease-in;
+    background: black;
+    z-index: -1;
+    border-radius: 50%;
+}
+
+button:first-child::before{
+    border: 2px solid #eb0feb;
+}
+
+button:nth-child(2)::before{
+    border: 2px solid #42eb0f;
+}
+
+
+button:last-child::before{
+    border: 2px solid #00ffff;
+}
+
+/* Button after */
+
+button::after{
+    content: '';
+    position: absolute;
+    right: -5px;
+    bottom: -5px;
+    width: 10px;
+    height: 10px;
+    transition: 0.5s ease-in;
+    background: black;
+    z-index: -1;
+    border-radius: 50%;
+}
+
+button:first-child::after{
+    border: 2px solid #eb0feb;
+}
+
+button:nth-child(2)::after{
+    border: 2px solid #42eb0f;
+}
+
+button:last-child::after{
+    border: 2px solid #00ffff;
+}
+
+/* hover effect */
+
+button:hover::before{
+    left:calc(100% - 5px) ;
+}
+
+button:hover::after{
+    right:calc(100% - 5px) ;
+}
+
+button:hover{
+    color: #000;
+    cursor: pointer;
+}
+
+/* After hovering each buttons child */
+
+button:first-child:hover{
+    background: #eb0feb;
+    box-shadow: 0 0 60px 0 #eb0feb;
+}
+
+button:nth-child(2):hover{
+    background: #42eb0f;
+    box-shadow: 0 0 60px 0 #42eb0f;
+}
+
+button:last-child:hover{
+    background: #00ffff;
+    box-shadow: 0 0 60px 0 #00ffff;
+}
+
